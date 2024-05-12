@@ -1,0 +1,254 @@
+@import url('./main.css');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background: #f4f4f4; */
+    background: #74b9ff;
+}
+
+header {
+    /* background: white; */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    /* top: -200px; */
+}
+
+.profile-info h1 {
+    margin: 0;
+    color: #333;
+}
+
+.profile-info p {
+    margin: 2px 0;
+    color: #666;
+}
+.profile-actions{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+
+.profile-actions button {
+    background: #3e57db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.profile-actions a{
+    text-decoration: none;
+    color: white;
+    background: #3e57db;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 2px;
+
+}
+.profile-actions a:hover {
+    background: #005682;
+}
+
+.profile-actions button:hover {
+    background: #005682;
+}
+
+main {
+    padding: 20px;
+    /* background: white; */
+    background: rgba(255, 255, 255, 0.9);
+    margin-top: 20px;
+    /* padding-left: 250px; */
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.bio, .experience, .education {
+    margin-bottom: 20px;
+}
+
+.bio h2{
+    margin: 0;
+    color: #333;
+    font-size: 25px;
+}
+.basic {
+    padding: 20px;
+    margin-right: 50px;
+    display: grid;
+    grid-template-columns: 350px auto; 
+    grid-gap: 20px; 
+    align-items: center;
+    border: #8b8b8b 1px solid;
+    border-radius: 5px;
+    /* border-bottom: #8b8b8b 1px solid; */
+}
+
+.basic h3, .basic p {
+    margin: 0; 
+}
+.basic h3 {
+    color: #333;
+    font-size: 18px;
+    /* border-bottom: #8b8b8b 1px solid; */
+}
+.basic p {
+    color: #666;
+    font-size: 18px;
+    /* border-bottom: #8b8b8b 1px solid; */
+}
+
+main .right {
+    background-color: #fff;
+    display: inline-block;
+    border: none;
+    color: #333;
+    width: 30px;
+    height: 30px;
+    position: relative; 
+    left: 680px; 
+    top: -120px; 
+}
+
+main .right:hover {
+    /* background-color: #f4f4f4; */
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    left: 682px;
+}
+.payment-img{
+    width: 600px;
+    height: 160px;
+    margin-right: 20px;
+}
+
+.my-payment-method {
+    /* 确保 section 使用 flex 布局 */
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; /* 调整为合适的最大宽度 */
+    margin: 10px; /* 居中显示 */
+}
+
+.my-payment-method img {
+    /* 调整图片大小 */
+    width: 80px;
+    height: 50px;
+    /* margin-right: 20px; */
+    position: relative;
+    left: 10px;
+    top: 55px;
+}
+
+.my-payment-method p {
+    /* 使 MasterCard 和 卡号在同一行显示 */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 0px 0; 
+    /* margin-left: 80px; */
+    /* padding-left: 1000px; */
+    margin-bottom: 25px;
+    padding: 20px 20px 20px 100px; 
+    border: 1px solid #ccc; 
+}
+
+
+.my-payment-method button {
+   
+    padding: 10px 20px;
+    margin: 5px 0; 
+    width: 100%; 
+    background-color: #3e57db; 
+    color: #fff;
+    border: 1px solid #ddd; 
+    cursor: pointer; 
+    border-radius: 5px;
+    font-size: 15px;
+}
+.my-payment-method button:hover {
+    background-color: #005682; 
+    shadow: 0 0 10px #005682;
+}
+
+.browse-services h3{
+    margin: 0;
+    color: #333;
+    font-size: 25px;
+}
+
+.browse-buttons{
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* .browse-buttons button {
+   
+    color: black;
+    background: #0984e3;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    border: #0984e3 1px solid;
+    font-size: 16px;
+    font: sans-serif;
+    font-weight: bold;
+    color: #fff;
+} */
+
+
+
+.browse-buttons a{
+    text-decoration: none;
+    color: #fff;
+    /* width: 150px;
+    height: 150px; */
+    color: black;
+    background: #3e57db;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    border: #0984e3 1px solid;
+    font-size: 16px;
+    font: sans-serif;
+    font-weight: bold;
+    color: #fff;
+    padding-top: 55px;
+    text-align: center;
+}
+
+.browse-buttons a:hover {
+    background: #0978cc;
+    font-size: 17px;
+    padding-top: 52px;
+}

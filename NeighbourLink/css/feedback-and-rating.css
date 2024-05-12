@@ -1,0 +1,169 @@
+@import url('./main.css');
+
+.body{
+    background-color: #f8f9fa;
+
+}
+
+.feedback-container {
+    /* width: 100%;
+    height: 100%; */
+    margin: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    color: #3e57db;
+}
+
+
+
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion button {
+    background-color: var(--background);
+    color: var(--on-background);
+    border: none;
+    border-top: 1px solid #ccc;
+    padding: 1em 0 1em 0;
+    text-align: left;
+    font: inherit;
+}
+
+.accordion button:first-child {
+    border:none;
+}
+
+.accordion button p {
+    margin-left: 1em;
+    color: #3e57db;
+}
+
+.important {
+    font-weight: 700;
+}
+
+.hidden {
+    display: none;
+}
+
+.accordion .selected {
+    background-color: var(--surface);
+    color: var(--on-surface);
+}
+
+.accordion button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion button > div {
+    margin-right: 1em;
+}
+
+.accordion .selected > div::before {
+    background-image: url(../images/accordion-up.svg);
+}
+
+.accordion button > div::before {
+    display: inline-block;
+    content: "";
+    background-image: url(../images/accordion-down.svg);
+    height: 1em;
+    width: 1em;
+    fill: var(--on-surface);
+}
+
+.accordion .content {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 500px;
+}
+
+.feedback-history{
+    box-shadow: 0 8px 8px rgba(0,0,0,0.2);
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em;
+    color: #3e57db;
+    border-radius: 8px;
+}
+
+
+
+
+
+.feedback-form {
+    left: 650px;
+    position: absolute;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 550px;
+    height: 480px;
+    margin: auto; /* Center the form on the page */
+}
+
+.feedback-form h2 {
+    color: #333;
+    text-align: center;
+    color: #3e57db;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.feedback-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form label {
+    /* font-weight: bold; */
+    margin-top: 8px;
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+}
+
+.feedback-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.feedback-form button:hover {
+    background-color: #0056b3;
+}
+
+.feedback-history h2{
+    color: #3e57db;
+    font-size: 28px;
+    /* margin-bottom: 10px;
+    margin-left: 120px; */
+    margin: 10px auto;
+}

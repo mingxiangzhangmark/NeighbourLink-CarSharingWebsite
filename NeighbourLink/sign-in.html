@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign-in</title>
+    <link rel="stylesheet" href="./css/sign-in.css" />
+    <script src="./js/sign-in.js" async defer></script>
+  </head>
+  <body onclick="incClicks()">
+       <!-- Navbar -->
+       <nav class="navbar">
+        <!-- <a class="navbar-brand" href="./">NeighbourLink</a> -->
+        <h4>NeighbourLink</h4>
+        <a class="active" href="./">Home</a>
+        <!-- <a href="./share-and-search.html">Share and Search</a> -->
+        <a href="./about.html">About</a>
+        <a href="./share-and-search.html">Ride</a>
+        <a href="./driver.html">Drive</a>
+        <a href="./blog.html">Blog</a>
+        <!-- <a href="./terms-and-conditions.html">Terms and Conditions</a> -->
+        <a href="./help.html">Help</a>
+        <!-- <a href="#"><img src="./images/icons8-earth-64.png" alt="" class="earth_icon"> EN</a> -->
+        <div class="dropdown">
+          <button class="dropbtn">EN <img src="./images/icons8-earth-64.png" alt="" class="earth_icon"></button>
+          <div class="dropdown-content">
+            <a href="#">中文</a>
+            <a href="#">English</a>
+            <a href="#">日本語</a>
+            <a href="#">Italiano</a>
+            <a href="#">Русский</a>
+          </div>
+        </div>
+        <a href="./sign-in.html">Sign In</a>
+        <a href="./my-profile.html"><img width="25px" src="./images/icons8-person-72-header.png" alt=""></a>
+  
+      </nav>
+      <!-- Navbar -->
+
+    <!-- Sign-in section -->
+    <section class="sign-in">
+      <!-- Behavioral tracking code -->
+      <pre id="tracking-data"></pre>
+      <!-- End of behavioral tracking code -->
+
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button
+            type="button"
+            id="login-btn"
+            class="toggle-btn"
+            onclick="login()"
+          >
+            Log In
+          </button>
+          <button
+            type="button"
+            id="register-btn"
+            class="toggle-btn"
+            onclick="register()"
+          >
+            Register
+          </button>
+        </div>
+        <!-- Login form -->
+        <form id="login" action="javascript:void(0);">
+          <div class="floating-label">
+            <input
+              type="email"
+              id="login-email"
+              class="input-field"
+              placeholder="Email"
+              required
+            />
+            <label for="login-email">Email</label>
+          </div>
+          <div class="floating-label">
+            <input
+              type="password"
+              id="login-password"
+              class="input-field"
+              placeholder="Password"
+              required
+            />
+            <label for="login-password">Password</label>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="remember">
+            <input
+              type="checkbox"
+              id="login-remember"
+              checked
+            />
+            <label class="floating-label" for="login-remember">
+              Remember me
+            </label>
+          </div>
+          <button type="submit" class="submit-btn">Log In</button>
+        </form>
+        <!-- Login form -->
+
+        <!-- Register form -->
+        <!-- Prevent form from reloading page -->
+        <form id="register" action="javascript:void(0);" method="get">
+          <!-- Login details -->
+          <fieldset>
+            <legend>Login details</legend>
+            <!-- Username input -->
+            <div class="floating-label">
+              <input
+                name="username"
+                type="text"
+                class="required input-field count-characters"
+                id="register-username"
+                placeholder="Username"
+                title="Must be of length 5 to 12, must start with a capital letter and end with a number or special character."
+                onkeydown="incKeystrokes()"
+              />
+              <label for="register-username">Username</label>
+            </div>
+
+            <!-- Email input -->
+            <div class="floating-label">
+              <input
+                name="email"
+                type="text"
+                id="register-email"
+                class="required input-field count-characters"
+                placeholder="name@example.com"
+                title="example@joe.mama.is.so..."
+                onkeydown="incKeystrokes()"
+              />
+              <label for="register-email">Email</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="floating-label">
+              <input
+                name="password"
+                type="password"
+                id="register-password"
+                class="required input-field count-characters"
+                placeholder="Password"
+                title="At least 12 characters long, but 14 or more is better. A combination of uppercase letters, lowercase letters, numbers, and symbols."
+                onkeydown="incKeystrokes()"
+              />
+              <label for="register-password">Password</label>
+            </div>
+          </fieldset>
+          <!-- Login details -->
+
+          <!-- Personal details -->
+          <fieldset>
+            <legend>Personal details</legend>
+            <!-- Name input -->
+            <div class="name">
+              <div class="floating-label">
+                <input
+                  name="firstname"
+                  type="text"
+                  class="required input-field count-characters"
+                  id="register-firstname"
+                  placeholder="John"
+                  title="Must contain the alphabet only."
+                  onkeydown="incKeystrokes()"
+                />
+                <label for="register-firstname">First Name</label>
+              </div>
+              <div class="floating-label">
+                <input
+                  name="lastname"
+                  type="text"remove value from form.
+                  class="required input-field count-characters"
+                  id="register-lastname"
+                  placeholder="Doe"
+                  title="Must contain the alphabet only."
+                  onkeydown="incKeystrokes()"
+                />
+                <label for="register-lastname">Last Name</label>
+              </div>
+            </div>
+
+            <!-- Gender and language input -->
+            <label for="register-gender">Gender</label>
+            <select name="gender" class="required form-select" id="register-gender">
+              <option selected>Other</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Non-binary</option>
+              <option>Prefer not to say</option>
+            </select>
+            <br/>
+            <label for="register-language">Language</label>
+            <select name="language" class="required form-select" id="register-language">
+              <option>Other</option>
+              <option>Afrikaans</option>
+              <option>Albanian</option>
+              <option>Amharic</option>
+              <option>Arabic</option>
+              <option>Armenian</option>
+              <option>Azerbaijani</option>
+              <option>Basque</option>
+              <option>Belarusian</option>
+              <option>Bengali</option>
+              <option>Bosnian</option>
+              <option>Bulgarian</option>
+              <option>Catalan</option>
+              <option>Cebuano</option>
+              <option>Chichewa</option>
+              <option>Chinese</option>
+              <option>Corsican</option>
+              <option>Croatian</option>
+              <option>Czech</option>
+              <option>Danish</option>
+              <option selected>Dutch</option>
+              <option>English</option>
+              <option>Esperanto</option>
+              <option>Estonian</option>
+              <option>Finnish</option>
+              <option>French</option>
+              <option>Frisian</option>
+              <option>Galician</option>
+              <option>Georgian</option>
+              <option>German</option>
+              <option>Greek</option>
+              <option>Gujarati</option>
+              <option>Haitian Creole</option>
+              <option>Hausa</option>
+              <option>Hawaiian</option>
+              <option>Hebrew</option>
+              <option>Hindi</option>
+              <option>Hmong</option>
+              <option>Hungarian</option>
+              <option>Icelandic</option>
+              <option>Igbo</option>
+              <option>Indonesian</option>
+              <option>Irish</option>
+              <option>Italian</option>
+              <option>Japanese</option>
+              <option>Javanese</option>
+              <option>Kannada</option>
+              <option>Kazakh</option>
+              <option>Khmer</option>
+              <option>Korean</option>
+              <option>Kurdish</option>
+              <option>Kyrgyz</option>
+              <option>Lao</option>
+              <option>Latin</option>
+              <option>Latvian</option>
+              <option>Lithuanian</option>
+              <option>Luxembourgish</option>
+              <option>Macedonian</option>
+              <option>Marathi</option>
+              <option>Mongolian</option>
+              <option>Myanmar (Burmese)</option>
+              <option>Nepali</option>
+              <option>Norwegian</option>
+              <option>Pashto</option>
+              <option>Persian</option>
+              <option>Polish</option>
+              <option>Portuguese</option>
+              <option>Punjabi</option>
+              <option>Romanian</option>
+              <option>Russian</option>
+              <option>Samoan</option>
+              <option>Scots Gaelic</option>
+              <option>Serbian</option>
+              <option>Sesotho</option>
+              <option>Shona</option>
+              <option>Sindhi</option>
+              <option>Sinhala</option>
+              <option>Slovak</option>
+              <option>Slovenian</option>
+              <option>Somali</option>
+              <option>Spanish</option>
+              <option>Sundanese</option>
+              <option>Swahili</option>
+              <option>Swedish</option>
+              <option>Tajik</option>
+              <option>Tamil</option>
+              <option>Telugu</option>
+              <option>Thai</option>
+              <option>Turkish</option>
+              <option>Ukrainian</option>
+              <option>Urdu</option>
+              <option>Uzbek</option>
+              <option>Vietnamese</option>
+              <option>Welsh</option>
+              <option>Xhosa</option>
+              <option>Yiddish</option>
+              <option>Yoruba</option>
+              <option>Zulu</option>
+            </select>
+            <!-- Date of birth input -->
+            <div class="floating-label">
+              <input
+                name="dob"
+                type="date"
+                id="register-dob"
+                class="required input-field"
+                placeholder="Date of birth"
+                title=""
+                onkeydown="incKeystrokes()"
+              />
+              <label for="register-dob">Date of birth</label>
+            </div>
+
+            <!-- Address input -->
+            <div class="floating-label">
+              <input
+                name="address"
+                type="text"
+                id="register-address"
+                class="required input-field count-characters"
+                placeholder="Address"
+                title="123 Silly Street Goofy Town, Laughing Province"
+                onkeydown="incKeystrokes()"
+              />
+              <label for="register-address">Address</label>
+            </div>
+
+            <!-- Country and zipcode input -->
+            <label for="register-country">Country</label>
+            <select name="country" class="required form-select" id="register-country">
+              <option>Other</option>
+              <option>Afghanistan</option>
+              <option>Åland Islands</option>
+              <option>Albania</option>
+              <option>Algeria</option>
+              <option>American Samoa</option>
+              <option>Andorra</option>
+              <option>Angola</option>
+              <option>Anguilla</option>
+              <option>Antarctica</option>
+              <option>Antigua and Barbuda</option>
+              <option>Argentina</option>
+              <option>Armenia</option>
+              <option>Aruba</option>
+              <option>Australia</option>
+              <option>Austria</option>
+              <option>Azerbaijan</option>
+              <option>Bahamas</option>
+              <option>Bahrain</option>
+              <option>Bangladesh</option>
+              <option>Barbados</option>
+              <option>Belarus</option>
+              <option>Belgium</option>
+              <option>Belize</option>
+              <option>Benin</option>
+              <option>Bermuda</option>
+              <option>Bhutan</option>
+              <option>Bolivia</option>
+              <option>
+                Bosnia and Herzegovina
+              </option>
+              <option>Botswana</option>
+              <option>Bouvet Island</option>
+              <option>Brazil</option>
+              <option>
+                British Indian Ocean Territory
+              </option>
+              <option>Brunei Darussalam</option>
+              <option>Bulgaria</option>
+              <option>Burkina Faso</option>
+              <option>Burundi</option>
+              <option>Cambodia</option>
+              <option>Cameroon</option>
+              <option>Canada</option>
+              <option>Cape Verde</option>
+              <option>Cayman Islands</option>
+              <option>
+                Central African Republic
+              </option>
+              <option>Chad</option>
+              <option>Chile</option>
+              <option>China</option>
+              <option>Christmas Island</option>
+              <option>
+                Cocos (Keeling) Islands
+              </option>
+              <option>Colombia</option>
+              <option>Comoros</option>
+              <option>Congo</option>
+              <option>
+                Congo, The Democratic Republic of The
+              </option>
+              <option>Cook Islands</option>
+              <option>Costa Rica</option>
+              <option>Cote D'ivoire</option>
+              <option>Croatia</option>
+              <option>Cuba</option>
+              <option>Cyprus</option>
+              <option>Czech Republic</option>
+              <option>Denmark</option>
+              <option>Djibouti</option>
+              <option>Dominica</option>
+              <option>Dominican Republic</option>
+              <option>Ecuador</option>
+              <option>Egypt</option>
+              <option>El Salvador</option>
+              <option>Equatorial Guinea</option>
+              <option>Eritrea</option>
+              <option>Estonia</option>
+              <option>Ethiopia</option>
+              <option>
+                Falkland Islands (Malvinas)
+              </option>
+              <option>Faroe Islands</option>
+              <option>Fiji</option>
+              <option>Finland</option>
+              <option>France</option>
+              <option>French Guiana</option>
+              <option>French Polynesia</option>
+              <option>
+                French Southern Territories
+              </option>
+              <option>Gabon</option>
+              <option>Gambia</option>
+              <option>Georgia</option>
+              <option>Germany</option>
+              <option>Ghana</option>
+              <option>Gibraltar</option>
+              <option>Greece</option>
+              <option>Greenland</option>
+              <option>Grenada</option>
+              <option>Guadeloupe</option>
+              <option>Guam</option>
+              <option>Guatemala</option>
+              <option>Guernsey</option>
+              <option>Guinea</option>
+              <option>Guinea-bissau</option>
+              <option>Guyana</option>
+              <option>Haiti</option>
+              <option>
+                Heard Island and Mcdonald Islands
+              </option>
+              <option>
+                Holy See (Vatican City State)
+              </option>
+              <option>Honduras</option>
+              <option>Hong Kong</option>
+              <option>Hungary</option>
+              <option>Iceland</option>
+              <option>India</option>
+              <option>Indonesia</option>
+              <option>
+                Iran, Islamic Republic of
+              </option>
+              <option>Iraq</option>
+              <option>Ireland</option>
+              <option>Isle of Man</option>
+              <option>Israel</option>
+              <option>Italy</option>
+              <option>Jamaica</option>
+              <option>Japan</option>
+              <option>Jersey</option>
+              <option>Jordan</option>
+              <option>Kazakhstan</option>
+              <option>Kenya</option>
+              <option>Kiribati</option>
+              <option>
+                Korea, Democratic People's Republic of
+              </option>
+              <option>Korea, Republic of</option>
+              <option>Kuwait</option>
+              <option>Kyrgyzstan</option>
+              <option>
+                Lao People's Democratic Republic
+              </option>
+              <option>Latvia</option>
+              <option>Lebanon</option>
+              <option>Lesotho</option>
+              <option>Liberia</option>
+              <option>
+                Libyan Arab Jamahiriya
+              </option>
+              <option>Liechtenstein</option>
+              <option>Lithuania</option>
+              <option>Luxembourg</option>
+              <option>Macao</option>
+              <option>
+                Macedonia, The Former Yugoslav Republic of
+              </option>
+              <option>Madagascar</option>
+              <option>Malawi</option>
+              <option>Malaysia</option>
+              <option>Maldives</option>
+              <option>Mali</option>
+              <option>Malta</option>
+              <option>Marshall Islands</option>
+              <option>Martinique</option>
+              <option>Mauritania</option>
+              <option>Mauritius</option>
+              <option>Mayotte</option>
+              <option>Mexico</option>
+              <option>
+                Micronesia, Federated States of
+              </option>
+              <option>Moldova, Republic of</option>
+              <option>Monaco</option>
+              <option>Mongolia</option>
+              <option>Montenegro</option>
+              <option>Montserrat</option>
+              <option>Morocco</option>
+              <option>Mozambique</option>
+              <option>Myanmar</option>
+              <option>Namibia</option>
+              <option>Nauru</option>
+              <option>Nepal</option>
+              <option selected value="Netherlands">Netherlands</option>
+              <option>Netherlands Antilles</option>
+              <option>New Caledonia</option>
+              <option>New Zealand</option>
+              <option>Nicaragua</option>
+              <option>Niger</option>
+              <option>Nigeria</option>
+              <option>Niue</option>
+              <option>Norfolk Island</option>
+              <option>
+                Northern Mariana Islands
+              </option>
+              <option>Norway</option>
+              <option>Oman</option>
+              <option>Pakistan</option>
+              <option>Palau</option>
+              <option>
+                Palestinian Territory, Occupied
+              </option>
+              <option>Panama</option>
+              <option>Papua New Guinea</option>
+              <option>Paraguay</option>
+              <option>Peru</option>
+              <option>Philippines</option>
+              <option>Pitcairn</option>
+              <option>Poland</option>
+              <option>Portugal</option>
+              <option>Puerto Rico</option>
+              <option>Qatar</option>
+              <option>Reunion</option>
+              <option>Romania</option>
+              <option>Russian Federation</option>
+              <option>Rwanda</option>
+              <option>Saint Helena</option>
+              <option>
+                Saint Kitts and Nevis
+              </option>
+              <option>Saint Lucia</option>
+              <option>
+                Saint Pierre and Miquelon
+              </option>
+              <option>
+                Saint Vincent and The Grenadines
+              </option>
+              <option>Samoa</option>
+              <option>San Marino</option>
+              <option>
+                Sao Tome and Principeremove value from form.
+              </option>
+              <option>Saudi Arabia</option>
+              <option>Senegal</option>
+              <option>Serbia</option>
+              <option>Seychelles</option>
+              <option>Sierra Leone</option>
+              <option>Singapore</option>
+              <option>Slovakia</option>
+              <option>Slovenia</option>
+              <option>Solomon Islands</option>
+              <option>Somalia</option>
+              <option>South Africa</option>
+              <option>
+                South Georgia and The South Sandwich Islands
+              </option>
+              <option>Spain</option>
+              <option>Sri Lanka</option>
+              <option>Sudan</option>
+              <option>Suriname</option>
+              <option>
+                Svalbard and Jan Mayen
+              </option>
+              <option>Swaziland</option>
+              <option>Sweden</option>
+              <option>Switzerland</option>
+              <option>Syrian Arab Republic</option>
+              <option>Taiwan</option>
+              <option>Tajikistan</option>
+              <option>remove value from form.
+                Tanzania, United Republic of
+              </option>
+              <option>Thailand</option>
+              <option>Timor-leste</option>
+              <option>Togo</option>
+              <option>Tokelau</option>
+              <option>Tonga</option>
+              <option>Trinidad and Tobago</option>
+              <option>Tunisia</option>
+              <option>Turkey</option>
+              <option>Turkmenistan</option>
+              <option>
+                Turks and Caicos Islands
+              </option>
+              <option>Tuvalu</option>
+              <option>Uganda</option>
+              <option>Ukraine</option>
+              <option>United Arab Emirates</option>
+              <option>United Kingdom</option>
+              <option>United States</option>
+              <option>
+                United States Minor Outlying Islands
+              </option>
+              <option>Uruguay</option>
+              <option>Uzbekistan</option>
+              <option>Vanuatu</option>
+              <option>Venezuela</option>
+              <option>Viet Nam</option>
+              <option>
+                Virgin Islands, British
+              </option>
+              <option>Virgin Islands, U.S.</option>
+              <option>Wallis and Futuna</option>
+              <option>Western Sahara</option>
+              <option>Yemen</option>
+              <option>Zambia</option>
+              <option>Zimbabwe</option>
+            </select>
+            <div class="floating-label">
+              <input
+                name="zipcode"
+                type="text"
+                class="required input-field count-characters"
+                id="register-zipcode"
+                placeholder="1234AB"
+                title="Must be a valid Dutch zipcode, e.g. 1234AB or 1234 AB"
+                onkeydown="incKeystrokes()"
+              />
+              <label for="register-zipcode">Zip Code</label>
+            </div>
+
+            <!-- Phone number input -->
+            <div class="floating-label">
+              <input
+                name="tel"
+                type="tel"
+                id="register-tel"
+                class="required input-field count-characters"
+                placeholder="123456789"
+                title="E.164 formatting. e.g. +31696969420"
+                onkeydown="incKeystrokes()"
+              />
+              <label for="register-tel">Phone number</label>
+            </div>
+
+            <!-- About/bio -->
+            <div class="floating-label">
+              <textarea
+                name="bio"
+                type="text"
+                id="register-bio"
+                class="input-field count-characters"
+                placeholder="Meet John Doe, a man of many talents including getting lost in his own neighborhood and burning water. In his spare time, he enjoys long naps and pretending to understand sports. He's also been known to make a mean grilled cheese sandwich, but don't tell his mom we said that."
+                title="Meet John Doe, a man of many talents including getting lost in his own neighborhood and burning water. In his spare time, he enjoys long naps and pretending to understand sports. He's also been known to make a mean grilled cheese sandwich, but don't tell his mom we said that."
+                onkeydown="incKeystrokes()"
+              ></textarea>
+              <label for="register-bio">About/bio</label>
+            </div>
+          </fieldset>
+          <!-- Personal details -->
+
+          <!-- Driver license -->
+          <fieldset>
+            <legend>Driver license</legend>
+            <p>Only if you want a driver's account</p>
+            <!-- Driver license type input -->
+            <div class="floating-label">
+              <input
+                name="licencetype"
+                type="text"
+                id="register-licensetype"
+                class="input-field count-characters"
+                placeholder="A"
+                title="One valid licence type. E.g. B or B+ or C1 or T or DE"
+                onkeydown="incKeystrokes()"
+              />
+              <label for="register-licensetype">License Type</label>
+            </div>
+            <!-- Driver license picture input -->
+            <label for="register-license"
+              >Upload a picture of your driver's license</label
+            >
+            <input name="licence" class="input-field" type="file" id="register-license" />
+          </fieldset>
+
+          <!-- Checkbox -->
+          <input name="terms" class="required" type="checkbox" id="register-terms" />
+          <label for="register-terms"
+            >I have read and agree to the
+            <a
+              href="./terms-and-conditions.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ext-link"
+              >term and conditions</a
+            ></label
+          >
+          <button type="button" class="submit-btn" onclick="registerSubmit()">
+            Register
+          </button>
+        </form>
+        <!-- Register form -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+    
+      <!-- Copyright -->
+      <div class="copyright">
+        &copy; 2024 NeighbourLink. All rights reserved
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </body>
+</html>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/chatroom.css" />
+    <title>Chatroom</title>
+  </head>
+  <body>
+    <nav class="navbar">
+        <!-- <a class="navbar-brand" href="./">NeighbourLink</a> -->
+        
+        <h4 class="nav-name" >Chatroom</h4>
+        <a href="./my-profile.html">Back</a>
+      </nav>
+      <!-- Navbar -->
+    <section >
+        <div class="container">
+            <header class="header">
+              <h4 class="title">Live User</h4>
+              <small class="subtitle">Search by name and/or location</small>
+              <input type="text" id="filter" placeholder="Search">
+            </header>
+      
+            <ul id="result" class="user-list">
+              <li>
+                <h3>Loading...</h3>
+              </li>
+            </ul>
+          </div>
+
+          <div class="chatbox">
+            <div class="chat-person">
+                <img src="./images/man1.jpg" alt="">
+                <h3>Jeremiah Burke</h3>
+                <p>Coffs Harbour, Australia</p>
+            </div>
+            <div class="chat-messages"></div>
+            
+            <div class="chatbox-input">
+                <input type="text" class="chat-input" placeholder="Type a message... " >
+                <button class="send-btn"><img src="./images/icons8-send-30.png" alt=""></button>
+                
+            </div>
+           
+          </div>
+
+    </section>
+   
+    <footer>
+     
+      <!-- Copyright -->
+      <div class="copyright">
+        &copy; 2024 NeighbourLink. All rights reserved
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <script src="./js/chatroom.js"></script>
+  </body>
+</html>

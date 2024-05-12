@@ -1,0 +1,117 @@
+@import url('./main.css');
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+.hero-section {
+    /* background-image: url('../images/drive1.jpg'); */
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    background-color: #74b9ff;
+  }
+
+  .hero-text {
+    text-align: left;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 30%;
+    left: 5%;
+    /* transform: translate(-30%, -30%); */
+    /* color: #fff; */
+    /* width: 500px;
+    height: 600px; */
+   } 
+
+  .hero-text h1 {
+    font-size: 50px;
+    margin: 0;
+  }
+
+  .hero-text p {
+    font-size: 30px;
+    font-style: italic;
+    margin: 20px 0;;
+  }
+
+  .button {
+    background-color: #000;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .button:hover {
+    background-color: #555;
+  }
+
+  .signin-text {
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .signin-text a{
+    color: #fff;
+  }
+
+  .hero-section img{
+    width:500px ;
+    height: 500px;
+    position: relative;
+    left: 55%;
+    top: 50px;
+    border-radius: 50px;
+  }
+
+  .hero-section2{
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-section2 img{
+    width: 450px;
+    height: 350px;
+    position: relative;
+    top: 20%;
+    left: 8%;
+  }
+
+  .hero-section2 .describe{
+    position: relative;
+    display: inline-block;
+    /* top: 50%;
+    left: 5%; */
+    font-size: 20px;
+    color: #000;
+    width: 500px;
+    height: 500px;
+    top: 20%;
+    left: 15%;
+  }
+
+    .hero-section2 .describe h2{
+        font-size: 35px;
+        margin: 0;
+    }
+
+    .hero-section2 .describe p{
+        font-size: 20px;
+        font-style: italic;
+        margin: 20px 0;
+    }

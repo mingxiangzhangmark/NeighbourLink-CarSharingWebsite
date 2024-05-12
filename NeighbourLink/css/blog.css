@@ -1,0 +1,136 @@
+@import url('./main.css');
+
+/* body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+} */
+
+header {
+    background-image: url('path-to-your-featured-image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.main-title {
+    font-size: 2em;
+    margin: 0;
+}
+
+.main-description {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.featured {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 500px;
+    font-family: Arial, sans-serif;
+}
+
+.featured-image {
+    flex: 1;
+    background-image: url('../images/road_blog.jpg'); 
+    background-size: cover;
+    height: 400px;
+}
+
+.featured-content {
+    flex: 0.8;
+    padding: 70px;
+
+}
+
+.featured-content p{
+    margin: 20px 0;
+}
+
+.read-more {
+    text-decoration: none;
+    color: #3e57db;
+    font-weight: bold;
+}
+
+.latest-posts {
+    padding: 20px;
+}
+
+.latest-posts h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.load-more {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #3e57db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 200px;
+    height: 60px;
+    font-size: 15px
+}
+.load-more:hover {
+  background-color: var(--primary-variant);
+  color: var(--on-primary);
+}
+
+
+.latest-posts {
+    padding: 20px;
+  }
+  
+  .latest-posts h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .post {
+    border: 1px solid #ccc;
+  }
+  
+  .post-image {
+    height: 200px;
+    background-size: cover;
+  }
+
+  .post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .post-content {
+    padding: 15px;
+  }
+  
+  .post h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .post-link {
+    color: #3e57db;
+    text-decoration: none;
+    font-weight: bold;
+  }

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/feedback-and-rating.css" />
+    <title>Feedback</title>
+  </head>
+  <body>
+    <nav class="navbar">
+        <!-- <a class="navbar-brand" href="./">NeighbourLink</a> -->
+        
+        <h4 class="nav-name" >Feedback and Rating</h4>
+        <a href="./my-profile.html">Back</a>
+        <script src="./js/share-and-search.js"></script>
+      </nav>
+      <!-- Navbar -->
+
+      <div class="feedback-container">
+        <section class="feedback-history">
+            <h2>Feedback History</h2>
+
+            <div class="accordion">
+              <button onclick="myFunction('accordion1')">
+                <p>Miyah Myles (10:00 15th May 2024)</p>
+                <div></div>
+              </button>
+              <div id="accordion1" class="content hidden">
+                <p>
+                  <span class="important origin">My Rating:</span>
+                  <span>Excellent</span>.
+                </p>
+                <p>
+                  <span class="important origin">My feedback Comments:</span>
+                  <span >Great driver, very friendly and punctual. I have a nice trip in the morning, thank you very much bro.</span>
+                </p>
+                <p><a href="#" style="text-decoration: none; color:blueviolet;">Change Feedback -></a></p>
+              </div>
+              <button onclick="myFunction('accordion2')">
+                <p>Veeti Seppanen (23:45 9th May 2024)</p>
+                <div></div>
+              </button>
+              <div id="accordion2" class="content hidden">
+                <p>
+                  <span class="important origin">My Rating:</span>
+                  <span>Average</span>.
+                </p>
+                <p>
+                  <span class="important origin">My feedback Comments:</span>
+                  <span >Great driver, very friendly and punctual. I have a nice trip in the morning, thank you very much bro.</span>
+                </p>
+                <p><a href="#" style="text-decoration: none; color:blueviolet;">Change Feedback -></a></p>
+              </div>
+              <button onclick="myFunction('accordion3')">
+                <p>June Cha (13:00 2nd May 2024)</p>
+                <div></div>
+              </button>
+              <div id="accordion3" class="content hidden">
+                <p>
+                  <span class="important origin">My Rating:</span>
+                  <span>Good</span>.
+                </p>
+                <p>
+                  <span class="important origin">My feedback Comments:</span>
+                  <span >Great driver, very friendly and punctual. I have a nice trip in the morning, thank you very much bro.</span>
+                </p>
+                <p><a href="#" style="text-decoration: none; color:blueviolet;">Change Feedback -></a></p>
+              </div>
+              <button onclick="myFunction('accordion4')">
+                <p>Iida Niskanen (15:15 23th April 2024)</p>
+                <div></div>
+              </button>
+              <div id="accordion4" class="content hidden">
+                <p>
+                  <span class="important origin">My Rating:</span>
+                  <span>Excellent</span>.
+                </p>
+                <p>
+                  <span class="important origin">My feedback Comments:</span>
+                  <span >Great driver, very friendly and punctual. I have a nice trip in the morning, thank you very much bro.</span>
+                </p>
+                <p><a href="#" style="text-decoration: none; color:blueviolet;">Change Feedback -></a></p>
+              </div>
+              <button onclick="myFunction('accordion5')">
+                <p>John Smith (8:00 17th April 2024)</p>
+                <div></div>
+              </button>
+              <div id="accordion5" class="content hidden">
+                <p>
+                  <span class="important origin">My Rating:</span>
+                  <span>Average</span>.
+                </p>
+                <p>
+                  <span class="important origin">My feedback Comments:</span>
+                  <span >Great driver, very friendly and punctual. I have a nice trip in the morning, thank you very much bro.</span>
+                </p>
+                <p><a href="#" style="text-decoration: none; color:blueviolet;">Change Feedback -></a></p>
+              </div>
+              <button onclick="myFunction('accordion6')">
+                <p>Kate Zhang (19:24 13th April 2024)</p>
+                <div></div>
+              </button>
+              <div id="accordion6" class="content hidden">
+                <p>
+                  <span class="important origin">My Rating:</span>
+                  <span>Good</span>.
+                </p>
+                <p>
+                  <span class="important origin">My feedback Comments:</span>
+                  <span >Great driver, very friendly and punctual. I have a nice trip in the morning, thank you very much bro.</span>
+                </p>
+                <p><a href="#" style="text-decoration: none; color:blueviolet;">Change Feedback -></a></p>
+              </div>
+            </div>
+
+        </section>
+
+
+        <div class="feedback-form">
+          <h2>NeighbourLink Trip Sharing Feedback</h2>
+          <form id="form">
+              <label for="trip">Trip Details: Sydney University To Sydney Opera House</label>
+              <label for="trip">Driver: Jack Peter</label>
+              <label for="trip">Date: 20:13-21.05 10th May 2024</label>
+              <label for="trip">Car Modle: 2010 Volvo S60 T6 Auto AWD</label>
+  
+              <label for="rating"  style="
+                        font-style: bold;
+                        font-size: large;
+                        margin-top: 15px;
+                        ">Rating:</label>
+              <select id="rating" name="rating">
+                  <option value="5">Excellent</option>
+                  <option value="4">Good</option>
+                  <option value="3">Average</option>
+                  <option value="2">Poor</option>
+                  <option value="1">Terrible</option>
+              </select>
+  
+              <label for="comments"style="
+                        font-size: larger;
+                         ">Comments:</label>
+              <textarea id="comments" name="comments" required></textarea>
+  
+              <button type="button" onclick="emergency()">🩻 Emergency</button>
+              <button type="submit">Submit Feedback</button>
+          </form>
+      </div>
+  
+        
+      </div>
+
+      
+
+
+
+
+
+
+
+      <footer>
+     
+        <!-- Copyright -->
+        <div class="copyright">
+          &copy; 2024 NeighbourLink. All rights reserved
+        </div>
+        <!-- Copyright -->
+      </footer>
+  
+      <!-- <script src="./js/chatroom.js"></script> -->
+    </body>
+  </html>

@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;700&display=swap');
+
+:root {
+    /* --primary: #283593; */
+    --primary: #3e57db;
+    --primary-variant:#001064;
+    --on-primary:whitesmoke;
+    --secondary: #8e24aa;
+    --secondary-variant:#4a148c;
+    --on-secondary:whitesmoke;
+    --background: white;
+    --on-background:black;
+    --surface: whitesmoke;
+    --on-surface:black;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+body {
+    /* Have the footer at the bottom of the viewport, if the page is smaller than the viewport height. */
+    /* min-height: 100vh; */
+    /* display: grid;
+    grid-template-rows: auto 1fr auto; */
+    /* color: var(--on-background);
+    background-color: var(--background); */
+    font-family: Mukta, Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    /* width: 100vw; */
+    display: flex; /* 开启flex布局 */
+    justify-content: space-between; /* 将子元素分散到两端 */
+    align-items: center; /* 使子元素垂直居中 */
+    padding: 1em 1em;
+    font-family:sans-serif;
+    background-color: var(--primary);
+    color: var(--on-primary)
+   
+}
+
+.navbar a{
+    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* flex-direction: row; */
+    
+    /* padding: 1.5em 0 1.5em 0; */
+    /* padding: 1.5em 0 1em 15em; */
+    /* margin: 5px 20px; */
+    /* column-gap: 1em; */
+    /* font-weight: 200; */
+    /* display: inline-flex;
+    align-items: center;
+    padding: 1em 1.5em; */
+    margin-left: 25px; 
+    margin-right: 10px;
+    color: inherit; 
+    text-decoration: none; 
+
+}
+
+.navbar h4 {
+    /* margin-right: auto; 
+    padding-left: 1em;  */
+    margin-right: auto;
+    padding-left: 1em;
+    font-size: 20px;
+}
+/* .navbar h4{
+    
+} */
+
+.earth_icon{
+    width: 21px;
+    height: 21px;
+    vertical-align:sub;
+}
+
+
+/* .navbar .navbar-brand {
+    font-size: 2.5em;
+    font-weight: 700;
+} */
+
+.navbar .navbar-brand:before {
+    content: "Car Sharing Supreme ";
+    font-weight: 200;
+}
+
+@media (max-width: 870px) {
+    .navbar .navbar-brand:before {
+        content: "";
+    }
+
+}
+
+.navbar a {
+    font-size: 1.2em;
+    color: inherit;
+    text-decoration: none;
+}
+.navbar a:hover {
+    /* font-size: 1.3em; */
+    color: var(--secondary);
+}
+
+.active {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3.2em;
+    font-weight: 200;
+    margin-top: 0.5em;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 0.5em;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0.1em 0 0.1em 0;
+}
+
+footer {
+    margin-top: 5vh;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--on-primary);
+}
+
+footer .github {
+    display: flex;
+    justify-content: center;
+    column-gap: 16px;
+    padding: 1vh 0 1vh 0;
+}
+
+footer .github a::after {
+    display: inline-block;
+    content: "";
+    margin-left: 0.5em;
+    background-image: url(../images/github.svg);
+    height: 1em;
+    width: 1em;
+    fill: var(--on-primary);
+}
+
+footer .copyright {
+    padding: 1em 0 1em 0;
+    /* background-color: var(--primary-variant); */
+    background-color: var(--primary);
+}
+
+/* Floating label inputs */
+fieldset {
+    border: none;
+    width: 100%;
+}
+
+fieldset legend {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.floating-label{
+    position: relative;
+}
+
+.floating-label > .input-field {
+    width: 100%;
+    height: 2em;
+    color: var(--on-surface);
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0.275em;
+    height: calc(3.8em + 2px);
+    padding: 1em 0.75em;
+
+    font: inherit;
+}
+
+.floating-label > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 1em 0.75em;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.floating-label > .input-field::placeholder{
+    opacity: 0;
+}
+
+.floating-label > .input-field:focus,
+.floating-label > .input-field:not(:placeholder-shown) {
+  padding-top: 1.625em;
+  padding-bottom: 0.625em;
+}
+.floating-label > .input-field:focus ~ label,
+.floating-label > .input-field:not(:placeholder-shown) ~ label {
+  transform: scale(0.85) translateY(-0.5em) translateX(0.15em);
+  color: var(--secondary);
+}
+
+.floating-label > .input-field:required ~ label::after, .required ~ label::after {
+    content: "*";
+    color: var(--secondary-variant);
+    margin-left: 0.25em;
+}
+/* Floating label inputs */
+
+.submit-btn {
+    width: 85%;
+    padding: 0.8em 3em;
+    cursor: pointer;
+    display: block;
+    margin: 1.5em;
+    background-color: var(--primary);
+    color: var(--on-primary);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-variant);
+}
+
+
+/* External links */
+.ext-link {
+    text-decoration: none;
+}
+
+.ext-link::after {
+    display: inline-block;
+    content: "";
+    margin-left: 0.5em;
+    background-image: url(../images/external-link.svg);
+    height: 1em;
+    width: 1em;
+    fill: var(--on-surface);
+}
+
+.ext-link:link {
+    color: var(--secondary);
+}
+.ext-link:visited, .ext-link:hover, .ext-link:active{
+    color: var(--secondary-variant)
+}
+/* External links */
+
+input[type="checkbox"] {
+    accent-color: var(--secondary);
+}
+
+/* add_EN*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  
+  .dropbtn {
+    background-color: transparent; 
+    color: white; 
+    /* padding: 16px; */
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    padding-left: 18px;
+    padding-top: 3px;
+  }
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: hsl(223, 74%, 46%);
+    min-width: 160px;
+    margin: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+   
+  }
+  
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  
+  .dropdown-content a:hover {
+    /* background-color: hsl(178, 73%, 46%); */
+    background-color: #74b9ff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+

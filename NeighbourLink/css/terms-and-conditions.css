@@ -1,0 +1,28 @@
+@import url('./main.css');
+
+section {
+    margin: 2em 10em;
+    border: 2px solid #283593;
+    padding: 1em 2em;
+    border-radius: 20px;
+}
+
+section h1{
+    text-align: center;
+    font-size: 2.5em;
+    color: #283593;
+    margin-bottom: 1em;
+}
+
+section h2{
+    font-size: 1.5em;
+    color: #283593;
+    /* margin-bottom: 1em; */
+}
+
+section p{
+    font-size: 1.1em;
+    
+    
+}
+
